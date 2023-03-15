@@ -61,7 +61,7 @@ namespace TestAntSystem
 
     public class AntSystem
     {
-        private readonly Random random = new(123); //69 123456789 123
+        private readonly Random random = new(1); //69 123456789 123
         private int maxNumberOfIterations = 1000;
         private double pheromonePriority = 3; //alfa
         private double heuristicPriority = 2; //beta
@@ -73,7 +73,7 @@ namespace TestAntSystem
         private double bestSolution = double.MaxValue;
         private int warehouse = 0;
         private Ant[] ants;
-        private int capacity = 100;
+        private int capacity = 35;
         private int numberOfElitistAnts = 3;
         private int numberOfRankAnts = 5;
         private int numberOfTrucks = 5;
