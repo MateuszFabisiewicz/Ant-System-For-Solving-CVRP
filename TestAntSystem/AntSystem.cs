@@ -61,7 +61,7 @@ namespace TestAntSystem
 
     public class AntSystem
     {
-        private readonly Random random = new(1); //69 123456789 123
+        private readonly Random random = new(69); //69 123456789 123 1
         private int maxNumberOfIterations = 1000;
         private double pheromonePriority = 3; //alfa
         private double heuristicPriority = 2; //beta
@@ -74,20 +74,28 @@ namespace TestAntSystem
         private int warehouse = 0;
         private Ant[] ants;
         private int capacity = 35;
-        private int numberOfElitistAnts = 3;
+        private int numberOfElitistAnts = 5;
         private int numberOfRankAnts = 5;
         private int numberOfTrucks = 5;
+        private int numberOfAnts;
 
 
         public int sMax;
         public int[] demandsOfCities; // indeksy miast od 1, 0 to indeks magazynu
         public double[,] distances;
         public double[,] pheromones;
-        
-        public AntSystem(int numberOfAnts, int[] citiesWithDemands, double[,] distances, double[,]? pheromones = null)
+
+        public AntSystem(int numberOfAnts, int[] citiesWithDemands, double[,] distances, double alfa, double beta, double Q, double rho,int maxNumberOfIterations,int capacity, double[,]? pheromones = null)
         { 
-            this.demandsOfCities = citiesWithDemands;
+            this.numberOfAnts = numberOfAnts;
+            demandsOfCities = citiesWithDemands;
             this.distances = distances;
+            pheromonePriority = alfa;
+            heuristicPriority = beta;
+            pheromoneDecreaseFactor = rho;
+            pheromoneIncreaseFactor = Q;
+            this.maxNumberOfIterations = maxNumberOfIterations;
+            this.capacity = capacity;
             
             if(pheromones != null )
             {
@@ -123,8 +131,8 @@ namespace TestAntSystem
                     //Console.WriteLine(sumOfEdgeWeights);
                 }
             }
-            sumOfEdgeWeights = sumOfEdgeWeights < 0.0000000001 ? 0.0000000001 : sumOfEdgeWeights;
-            sumOfEdgeWeights = sumOfEdgeWeights > 1000000000 ? 1000000000 : sumOfEdgeWeights;
+            //sumOfEdgeWeights = sumOfEdgeWeights < 0.000000001 ? 0.000000001 : sumOfEdgeWeights;
+            //sumOfEdgeWeights = sumOfEdgeWeights > 1000 ? 1000 : sumOfEdgeWeights;
             return sumOfEdgeWeights;
         }
 
@@ -205,6 +213,8 @@ namespace TestAntSystem
             //Console.WriteLine("Feromony: "+pheromones[currentCity, nextCity]);
             //Console.WriteLine("Dystans: " + distances[currentCity, nextCity]); 
             double pom =  Math.Pow(pheromones[currentCity, nextCity], pheromonePriority) * Math.Pow(1 / distances[currentCity, nextCity], heuristicPriority);
+            //pom = pom < 0.0001 ? 0.0001 : pom;
+            //pom = pom > 1000? 1000 : pom;
             return pom;
         }
 
@@ -215,16 +225,17 @@ namespace TestAntSystem
 
         private void InitAnts()
         {
-            ants = new Ant[demandsOfCities.Length];
+            ants = new Ant[numberOfAnts];
             for( int i = 1; i < ants.Length; i++)
             {
-                int city = i % demandsOfCities.Length;
-                /*
+                //int city = i % demandsOfCities.Length;
+                
+                int city;
                 do
                 {
                     city = random.Next(1, demandsOfCities.Length);
                 } while (capacity - demandsOfCities[city] < 0);
-                */
+                
                 ants[i] = new Ant(capacity, city, demandsOfCities.Length);
                 ants[i].capacity -= demandsOfCities[city];
                 ants[i].Path.Push(warehouse);

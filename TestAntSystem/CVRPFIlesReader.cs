@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace TestAntSystem
 {
@@ -29,6 +30,7 @@ namespace TestAntSystem
 			string[] allText = File.ReadAllLines(path);
 
 			name = allText[0].Split(':')[1];
+			Console.WriteLine("Wczytano plik: "+name);
 			dimension = int.Parse(allText[3].Split(':')[1]);
             capacity = int.Parse(allText[5].Split(':')[1]);
 
@@ -37,17 +39,21 @@ namespace TestAntSystem
 			List<Point> points = new();
 
 			int i = 7;
-			while (allText[i] != "DEMAND_SECTION")
+			int pom = i + dimension;
+			while (i < pom)//allText[i] != "DEMAND_SECTION")
 			{
 				string[] point = allText[i++].Split(" ");
-				points.Add(new(int.Parse(point[1]),int.Parse(point[2])));
+				//Console.WriteLine(point[1] + point[2]);
+				points.Add(new(int.Parse(point[^2]),int.Parse(point[^1])));
 			}
 
 			i++;
-			while (allText[i] != "DEPOT_SECTION")
+			pom = i + dimension;
+			while (i < pom)//allText[i] != "DEPOT_SECTION")
 			{
 				string[] demand = allText[i++].Split(" ");
-				citiesWithDemands[int.Parse(demand[0]) - 1] = int.Parse(demand[1]);
+                //Console.WriteLine(demand[1]);
+                citiesWithDemands[int.Parse(demand[0]) - 1] = int.Parse(demand[1]);
             }
 
             for (i = 0; i < dimension; i++)
