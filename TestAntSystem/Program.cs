@@ -32,13 +32,13 @@ namespace TestAntSystem
                 }
             }
             */
-            
+            /*
             string path = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\A-n32-k5.vrp.txt");
             CVRPFIlesReader reader = new(path);
 
             AntSystem antSystem = new(62, reader.GetDemands(), reader.GetDistances(), 3,2,2,0.1,1500,reader.GetCapacity());
             antSystem.AntSystemSoultion();
-            
+            */
             /*
             string path = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\P-n23-k8.vrp.txt");
             CVRPFIlesReader reader = new(path);
@@ -46,13 +46,13 @@ namespace TestAntSystem
             AntSystem antSystem = new(44, reader.GetDemands(), reader.GetDistances(), 3, 2, 2, 0.1, 1500, reader.GetCapacity());
             antSystem.AntSystemSoultion();
             */
-            /*
+            
             string path = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\P-n40-k5.vrp.txt");
             CVRPFIlesReader reader = new(path);
 
             AntSystem antSystem = new(80, reader.GetDemands(), reader.GetDistances(), 3, 2, 2, 0.1, 1000, reader.GetCapacity());
             antSystem.AntSystemSoultion();
-            */
+            
             /*
             string path = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\P-n16-k8.vrp.txt");
             CVRPFIlesReader reader = new(path);

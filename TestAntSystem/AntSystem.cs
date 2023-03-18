@@ -74,8 +74,8 @@ namespace TestAntSystem
         private int warehouse = 0;
         private Ant[] ants;
         private int capacity = 35;
-        private int numberOfElitistAnts = 2;
-        private int numberOfRankAnts = 5;
+        private int numberOfElitistAnts = 30;
+        private int numberOfRankAnts = 30;
         private int numberOfTrucks = 5;
         private int numberOfAnts;
 
@@ -131,8 +131,8 @@ namespace TestAntSystem
                     //Console.WriteLine(sumOfEdgeWeights);
                 }
             }
-            //sumOfEdgeWeights = sumOfEdgeWeights < 0.000000001 ? 0.000000001 : sumOfEdgeWeights;
-            //sumOfEdgeWeights = sumOfEdgeWeights > 100000000 ? 100000000 : sumOfEdgeWeights;
+            sumOfEdgeWeights = sumOfEdgeWeights < 0.000000001 ? 0.000000001 : sumOfEdgeWeights;
+            sumOfEdgeWeights = sumOfEdgeWeights > 100000000 ? 100000000: sumOfEdgeWeights;
             return sumOfEdgeWeights;
         }
 
@@ -159,7 +159,13 @@ namespace TestAntSystem
                     //Console.WriteLine("Procenty "+roulettePercents[nextCity]);
                 }
             }
-
+            /*
+            if(roulettePercents.All(x => x == 0))
+            {
+                int randomCity = Array.IndexOf(ant.visitedCities, false);
+                roulettePercents[randomCity] = 0.1;
+            }
+            */
             for (int index = 1; index < demandsOfCities.Length; index++)
                 roulettePercents[index] = roulettePercents[index] + roulettePercents[index - 1];
 
@@ -192,7 +198,7 @@ namespace TestAntSystem
             }
             else
             {
-                double min = double.MaxValue;
+                int min = int.MaxValue;
                 
                 int index = -1;
 
@@ -213,8 +219,10 @@ namespace TestAntSystem
             //Console.WriteLine("Feromony: "+pheromones[currentCity, nextCity]);
             //Console.WriteLine("Dystans: " + distances[currentCity, nextCity]); 
             double pom =  Math.Pow(pheromones[currentCity, nextCity], pheromonePriority) * Math.Pow(1.0 / distances[currentCity, nextCity], heuristicPriority);
-            //pom = pom < 0.0001 ? 0.0001 : pom;
-            //pom = pom > 1000? 1000 : pom;
+            //pom = pom < 0.00001 ? 0.00001 : pom;
+            //pom = pom > 1000 ? 1000 : pom;
+            //if (double.IsNaN(pom) || double.IsInfinity(pom))
+                //pom = 0;
             return pom;
         }
 
@@ -255,7 +263,7 @@ namespace TestAntSystem
             
             while (!ant.visitedCities.All(x => x)) // dopóki mrówka nie odwiedziła wszystkich miast
             {
-                int nextCity = ChooseNextCityByRoulette(ant);
+                int nextCity = ChooseNextCityByPseudoRoulette(ant);
                 //Console.WriteLine("Następne miasto: "+nextCity);
                 if (nextCity != -1)
                 {
@@ -392,13 +400,13 @@ namespace TestAntSystem
                 // wyparuj feromon
                 EvaporatePheromone();
                 // dla każdej mrówki rozłóż feromon (z parowaniem)
-                UpdatePheromone();
+                UpdatePheromoneWithRank();
                 //elitaryzm
                 //UpdatePheromoneOnTheBestSolution();
 
                 
 
-                //Console.WriteLine("Iteracja: "+i);
+                Console.WriteLine("Iteracja: "+i);
 
             }
 
