@@ -18,7 +18,7 @@ namespace TestAntSystem
 	public class CVRPFIlesReader
 	{
 		private int capacity;
-		private double[,] distances;
+		private int[,] distances;
 		private int[] citiesWithDemands;
 		private string name;
 		private double optimalValue;
@@ -34,7 +34,7 @@ namespace TestAntSystem
 			dimension = int.Parse(allText[3].Split(':')[1]);
             capacity = int.Parse(allText[5].Split(':')[1]);
 
-			distances = new double[dimension, dimension];
+			distances = new int[dimension, dimension];
 			citiesWithDemands = new int[dimension];
 			List<Point> points = new();
 
@@ -62,7 +62,10 @@ namespace TestAntSystem
                 for (int j = 0; j < dimension; j++)
                 {
 					Point pointB = points[j];
-                    distances[i, j] = Math.Sqrt(Math.Pow(pointA.x - pointB.x, 2) + Math.Pow(pointA.y - pointB.y, 2));
+					//Console.WriteLine("Miasta: " + i + " - " + j);
+					//Console.WriteLine("Double: "+Math.Sqrt(Math.Pow(pointA.x - pointB.x, 2) + Math.Pow(pointA.y - pointB.y, 2)));
+                    //Console.WriteLine("Int: " + (int)Math.Sqrt(Math.Pow(pointA.x - pointB.x, 2) + Math.Pow(pointA.y - pointB.y, 2)));
+                    distances[i, j] = (int)Math.Round(Math.Sqrt(Math.Pow(pointA.x - pointB.x, 2) + Math.Pow(pointA.y - pointB.y, 2)));
                 }
             }
         }
@@ -72,7 +75,7 @@ namespace TestAntSystem
 			return capacity;
 		}
 
-		public double[,] GetDistances()
+		public int[,] GetDistances()
 		{
 			return distances;
 		}

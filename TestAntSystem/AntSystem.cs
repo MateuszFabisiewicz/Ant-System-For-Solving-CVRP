@@ -10,7 +10,7 @@ namespace TestAntSystem
         public int currentCity;
         public Stack<int> Path;
         public bool[] visitedCities;
-        public double pathLength;
+        public int pathLength;
         public int usedTrucks;
 
         public Ant()
@@ -61,7 +61,7 @@ namespace TestAntSystem
 
     public class AntSystem
     {
-        private readonly Random random = new(69); //69 123456789 123 1
+        private readonly Random random = new(1); //69 123456789 123 1
         private int maxNumberOfIterations = 1000;
         private double pheromonePriority = 3; //alfa
         private double heuristicPriority = 2; //beta
@@ -74,7 +74,7 @@ namespace TestAntSystem
         private int warehouse = 0;
         private Ant[] ants;
         private int capacity = 35;
-        private int numberOfElitistAnts = 5;
+        private int numberOfElitistAnts = 2;
         private int numberOfRankAnts = 5;
         private int numberOfTrucks = 5;
         private int numberOfAnts;
@@ -82,10 +82,10 @@ namespace TestAntSystem
 
         public int sMax;
         public int[] demandsOfCities; // indeksy miast od 1, 0 to indeks magazynu
-        public double[,] distances;
+        public int[,] distances;
         public double[,] pheromones;
 
-        public AntSystem(int numberOfAnts, int[] citiesWithDemands, double[,] distances, double alfa, double beta, double Q, double rho,int maxNumberOfIterations,int capacity, double[,]? pheromones = null)
+        public AntSystem(int numberOfAnts, int[] citiesWithDemands, int[,] distances, double alfa, double beta, double Q, double rho,int maxNumberOfIterations,int capacity, double[,]? pheromones = null)
         { 
             this.numberOfAnts = numberOfAnts;
             demandsOfCities = citiesWithDemands;
@@ -132,7 +132,7 @@ namespace TestAntSystem
                 }
             }
             //sumOfEdgeWeights = sumOfEdgeWeights < 0.000000001 ? 0.000000001 : sumOfEdgeWeights;
-            //sumOfEdgeWeights = sumOfEdgeWeights > 1000 ? 1000 : sumOfEdgeWeights;
+            //sumOfEdgeWeights = sumOfEdgeWeights > 100000000 ? 100000000 : sumOfEdgeWeights;
             return sumOfEdgeWeights;
         }
 
@@ -212,7 +212,7 @@ namespace TestAntSystem
         {
             //Console.WriteLine("Feromony: "+pheromones[currentCity, nextCity]);
             //Console.WriteLine("Dystans: " + distances[currentCity, nextCity]); 
-            double pom =  Math.Pow(pheromones[currentCity, nextCity], pheromonePriority) * Math.Pow(1 / distances[currentCity, nextCity], heuristicPriority);
+            double pom =  Math.Pow(pheromones[currentCity, nextCity], pheromonePriority) * Math.Pow(1.0 / distances[currentCity, nextCity], heuristicPriority);
             //pom = pom < 0.0001 ? 0.0001 : pom;
             //pom = pom > 1000? 1000 : pom;
             return pom;
@@ -330,7 +330,7 @@ namespace TestAntSystem
                     int secondCity = ants[i].Path.Pop();
                     int firstCity = ants[i].Path.Peek();
                     //Console.Write(secondCity + "<-" + firstCity+"<-");
-                    double length = ants[i].pathLength;
+                    int length = ants[i].pathLength;
                     
                     double increase = (numberOfRankAnts-i-1)*pheromoneIncreaseFactor / length;
 
@@ -392,7 +392,7 @@ namespace TestAntSystem
                 // wyparuj feromon
                 EvaporatePheromone();
                 // dla każdej mrówki rozłóż feromon (z parowaniem)
-                UpdatePheromoneWithRank();
+                UpdatePheromone();
                 //elitaryzm
                 //UpdatePheromoneOnTheBestSolution();
 
@@ -411,9 +411,20 @@ namespace TestAntSystem
                     Console.WriteLine();
                     Console.Write("Route #" + ++routeNumber);
                 }
-                else
+                else if (bestPath[i] != 0)
                     Console.Write(" "+bestPath[i]);
             }
+            /*
+            Console.WriteLine();
+            int sum = 0;
+            for (int i = 1; i < bestPath.Length; i++)
+            {
+                Console.WriteLine(bestPath[i-1]+"-"+bestPath[i]+": " + distances[bestPath[i - 1], bestPath[i]]);
+                if (i > 0)
+                    sum += distances[bestPath[i - 1], bestPath[i]];
+            }
+            Console.WriteLine(sum);
+            */
         }
         
     }
