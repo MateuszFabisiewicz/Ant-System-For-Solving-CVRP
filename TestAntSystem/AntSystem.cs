@@ -4,6 +4,13 @@ using System.Globalization;
 
 namespace TestAntSystem
 {
+    public enum TypeOfSolution
+    {
+        Normal,
+        Elitist,
+        Rank,
+        Greedy
+    }
     public class Ant
     {
         public int capacity;
@@ -61,7 +68,7 @@ namespace TestAntSystem
 
     public class AntSystem
     {
-        private readonly Random random = new(1); //69 123456789 123 1
+        private Random random; //69 123456789 123 1
         private int maxNumberOfIterations = 1000;
         private double pheromonePriority = 3; //alfa
         private double heuristicPriority = 2; //beta
@@ -75,19 +82,23 @@ namespace TestAntSystem
         private Ant[] ants;
         private int capacity = 35;
         private int numberOfElitistAnts = 30;
-        private int numberOfRankAnts = 30;
+        private int numberOfRankAnts = 5;
         private int numberOfTrucks = 5;
         private int numberOfAnts;
-
+        private int seed;
 
         public int sMax;
         public int[] demandsOfCities; // indeksy miast od 1, 0 to indeks magazynu
         public int[,] distances;
         public double[,] pheromones;
 
-        public AntSystem(int numberOfAnts, int[] citiesWithDemands, int[,] distances, double alfa, double beta, double Q, double rho,int maxNumberOfIterations,int capacity, double[,]? pheromones = null)
-        { 
+        public AntSystem(int numberOfAnts, int[] citiesWithDemands, int[,] distances, double alfa, double beta, double Q, double rho, int maxNumberOfIterations, int capacity, int numberOfElitistAnts, int numberOfRankAnts, int seed, double[,]? pheromones = null)
+        {
+            this.seed = seed;
+            random = new(seed);
             this.numberOfAnts = numberOfAnts;
+            this.numberOfElitistAnts = numberOfElitistAnts;
+            this.numberOfRankAnts = numberOfRankAnts;
             demandsOfCities = citiesWithDemands;
             this.distances = distances;
             pheromonePriority = alfa;
@@ -216,14 +227,7 @@ namespace TestAntSystem
 
         private double ProbabilityOfMovingToTheCity(int currentCity,int nextCity)
         {
-            //Console.WriteLine("Feromony: "+pheromones[currentCity, nextCity]);
-            //Console.WriteLine("Dystans: " + distances[currentCity, nextCity]); 
-            double pom =  Math.Pow(pheromones[currentCity, nextCity], pheromonePriority) * Math.Pow(1.0 / distances[currentCity, nextCity], heuristicPriority);
-            //pom = pom < 0.00001 ? 0.00001 : pom;
-            //pom = pom > 1000 ? 1000 : pom;
-            //if (double.IsNaN(pom) || double.IsInfinity(pom))
-                //pom = 0;
-            return pom;
+            return Math.Pow(pheromones[currentCity, nextCity], pheromonePriority) * Math.Pow(1.0 / distances[currentCity, nextCity], heuristicPriority);
         }
 
         private bool CanAntGoToTheCity(Ant ant, int nextCity)
@@ -384,56 +388,70 @@ namespace TestAntSystem
             }
         }
 
-        public void AntSystemSoultion()
+        private void PrintBestSolution()
         {
-            for(int i = 0; i < maxNumberOfIterations; i++)
-            {
-                // stwórz mrówki
-                InitAnts();
-                
-                // dla każdej mrówki
-                for(int j = 1; j < ants.Length; j++)
-                {
-                    // znajdź rozwiązanie
-                    FindSolution(ants[j],j,i);
-                }
-                // wyparuj feromon
-                EvaporatePheromone();
-                // dla każdej mrówki rozłóż feromon (z parowaniem)
-                UpdatePheromoneWithRank();
-                //elitaryzm
-                //UpdatePheromoneOnTheBestSolution();
-
-                
-
-                Console.WriteLine("Iteracja: "+i);
-
-            }
-
-            Console.WriteLine("Rozwiązanie: "+bestSolution);
+            Console.WriteLine($"Rozwiązanie dla ziarna{seed}: " + bestSolution);
+            
             int routeNumber = 0;
-            for(int i = 0;i < bestPath.Length;i++)
+            for (int i = 0; i < bestPath.Length; i++)
             {
-                if (bestPath[i] == 0 && i!=bestPath.Length-1)
+                if (bestPath[i] == 0 && i != bestPath.Length - 1)
                 {
                     Console.WriteLine();
                     Console.Write("Route #" + ++routeNumber);
                 }
                 else if (bestPath[i] != 0)
-                    Console.Write(" "+bestPath[i]);
+                    Console.Write(" " + bestPath[i]);
             }
-            /*
             Console.WriteLine();
-            int sum = 0;
-            for (int i = 1; i < bestPath.Length; i++)
-            {
-                Console.WriteLine(bestPath[i-1]+"-"+bestPath[i]+": " + distances[bestPath[i - 1], bestPath[i]]);
-                if (i > 0)
-                    sum += distances[bestPath[i - 1], bestPath[i]];
-            }
-            Console.WriteLine(sum);
-            */
+            
         }
-        
+
+        public void AntSystemSoultion(TypeOfSolution type)
+        {
+            ResetData();
+            for (int i = 0; i < maxNumberOfIterations; i++)
+            {
+                // stwórz mrówki
+                InitAnts();
+
+                // dla każdej mrówki
+                for (int j = 1; j < ants.Length; j++)
+                {
+                    // znajdź rozwiązanie
+                    FindSolution(ants[j], j, i);
+                }
+                // wyparuj feromon
+                EvaporatePheromone();
+
+                // dla każdej mrówki rozłóż feromon
+                if (type == TypeOfSolution.Rank)
+                    UpdatePheromoneWithRank();
+                else
+                    UpdatePheromone();
+
+                if (type == TypeOfSolution.Elitist)
+                    UpdatePheromoneOnTheBestSolution();
+            }
+            PrintBestSolution();
+        }
+
+        private void ResetData()
+        {
+            bestSolution = double.MaxValue;
+            bestPath = Array.Empty<int>();
+            random = new(seed);
+            int numberOfEdges = distances.GetLength(0);
+            this.pheromones = new double[numberOfEdges, numberOfEdges];
+            for (int i = 0; i < numberOfEdges; i++)
+                for (int j = 0; j < numberOfEdges; j++)
+                    this.pheromones[i, j] = defaultPheromoneStartingValue;
+        }
+
+        public void ChangeSeed(int newSeed)
+        {
+            seed = newSeed;
+            //random = new(seed);
+        }
     }
 }
