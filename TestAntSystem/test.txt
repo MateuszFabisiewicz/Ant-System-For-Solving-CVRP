@@ -1,0 +1,86 @@
+Ant System: 
+Mrówka 1 znalazła rozwiązanie: 1346 w iteracji: 0
+Mrówka 2 znalazła rozwiązanie: 1129 w iteracji: 0
+Mrówka 12 znalazła rozwiązanie: 1101 w iteracji: 0
+Mrówka 4 znalazła rozwiązanie: 1015 w iteracji: 4
+Mrówka 38 znalazła rozwiązanie: 977 w iteracji: 7
+Mrówka 44 znalazła rozwiązanie: 960 w iteracji: 12
+Mrówka 29 znalazła rozwiązanie: 921 w iteracji: 13
+Mrówka 53 znalazła rozwiązanie: 913 w iteracji: 13
+Mrówka 38 znalazła rozwiązanie: 896 w iteracji: 15
+Mrówka 12 znalazła rozwiązanie: 880 w iteracji: 39
+Mrówka 53 znalazła rozwiązanie: 875 w iteracji: 42
+Mrówka 27 znalazła rozwiązanie: 859 w iteracji: 50
+Mrówka 22 znalazła rozwiązanie: 846 w iteracji: 198
+Mrówka 25 znalazła rozwiązanie: 830 w iteracji: 316
+Mrówka 11 znalazła rozwiązanie: 829 w iteracji: 829
+Mrówka 9 znalazła rozwiązanie: 820 w iteracji: 927
+Rozwiązanie dla ziarna1: 820
+
+Route #1 11 4 28 23 3 2 6
+Route #2 1 12 16 30
+Route #3 27 14 24
+Route #4 7 17 19 31 21 13
+Route #5 26 8 18 22 9 15 29 10 25 5 20
+
+ Elitist Ant System: 
+Mrówka 1 znalazła rozwiązanie: 1346 w iteracji: 0
+Mrówka 2 znalazła rozwiązanie: 1129 w iteracji: 0
+Mrówka 12 znalazła rozwiązanie: 1101 w iteracji: 0
+Mrówka 7 znalazła rozwiązanie: 1043 w iteracji: 1
+Mrówka 1 znalazła rozwiązanie: 1012 w iteracji: 2
+Mrówka 3 znalazła rozwiązanie: 952 w iteracji: 2
+Mrówka 27 znalazła rozwiązanie: 938 w iteracji: 3
+Mrówka 50 znalazła rozwiązanie: 927 w iteracji: 3
+Mrówka 31 znalazła rozwiązanie: 892 w iteracji: 8
+Mrówka 57 znalazła rozwiązanie: 884 w iteracji: 28
+Mrówka 1 znalazła rozwiązanie: 877 w iteracji: 46
+Mrówka 60 znalazła rozwiązanie: 870 w iteracji: 73
+Mrówka 59 znalazła rozwiązanie: 855 w iteracji: 74
+Mrówka 22 znalazła rozwiązanie: 844 w iteracji: 79
+Mrówka 34 znalazła rozwiązanie: 838 w iteracji: 413
+Rozwiązanie dla ziarna1: 838
+
+Route #1 27 24
+Route #2 14 22 9 15 10 25 20
+Route #3 17 19 31 21 13 6
+Route #4 16 12 1 7 26 30
+Route #5 5 29 18 8 11 4 28 23 2 3
+
+ Rank Ant System: 
+Mrówka 1 znalazła rozwiązanie: 1346 w iteracji: 0
+Mrówka 2 znalazła rozwiązanie: 1129 w iteracji: 0
+Mrówka 12 znalazła rozwiązanie: 1101 w iteracji: 0
+Mrówka 3 znalazła rozwiązanie: 1038 w iteracji: 2
+Mrówka 54 znalazła rozwiązanie: 992 w iteracji: 2
+Mrówka 30 znalazła rozwiązanie: 879 w iteracji: 19
+Mrówka 20 znalazła rozwiązanie: 877 w iteracji: 21
+Mrówka 8 znalazła rozwiązanie: 829 w iteracji: 23
+Mrówka 26 znalazła rozwiązanie: 818 w iteracji: 26
+Mrówka 45 znalazła rozwiązanie: 811 w iteracji: 30
+Mrówka 7 znalazła rozwiązanie: 802 w iteracji: 32
+Mrówka 60 znalazła rozwiązanie: 801 w iteracji: 43
+Mrówka 40 znalazła rozwiązanie: 796 w iteracji: 49
+Mrówka 20 znalazła rozwiązanie: 795 w iteracji: 80
+Mrówka 12 znalazła rozwiązanie: 791 w iteracji: 90
+Mrówka 53 znalazła rozwiązanie: 790 w iteracji: 108
+Mrówka 60 znalazła rozwiązanie: 789 w iteracji: 292
+Mrówka 34 znalazła rozwiązanie: 787 w iteracji: 328
+Mrówka 22 znalazła rozwiązanie: 785 w iteracji: 517
+Rozwiązanie dla ziarna1: 785
+
+Route #1 24 27
+Route #2 30 16 1 12
+Route #3 14 11 4 28 23 2 3 6
+Route #4 21 31 19 17 13 7 26
+Route #5 29 18 8 9 22 15 10 25 5 20
+
+ Greedy Ant: 
+Mrówka 0 znalazła rozwiązanie: 1145 w iteracji: 0
+Rozwiązanie dla ziarna1: 1145
+
+Route #1 15
+Route #2 9 11 4 28 2 6
+Route #3 23 3 17 19 31 21 13
+Route #4 8 10 25 5 20 27 24
+Route #5 18 22 29 14 7 1 12 16 26 30

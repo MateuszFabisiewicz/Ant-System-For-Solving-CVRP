@@ -1,4 +1,5 @@
-﻿using System.Collections.Immutable;
+﻿using Microsoft.VisualBasic;
+using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Globalization;
 
@@ -18,7 +19,6 @@ namespace TestAntSystem
         public Stack<int> Path;
         public bool[] visitedCities;
         public int pathLength;
-        public int usedTrucks;
 
         public Ant()
         {
@@ -27,7 +27,6 @@ namespace TestAntSystem
             Path = new();
             visitedCities = Array.Empty<bool>();
             pathLength = 0;
-            usedTrucks = 0;
         }
 
         public Ant(int capacity, int startCity, int numberOfCities)
@@ -39,7 +38,6 @@ namespace TestAntSystem
             visitedCities[startCity] = true;
             visitedCities[0] = true;
             pathLength = 0;
-            usedTrucks = 0;
         }
 
         public Ant(int capacity, int currentCity, Stack<int> path, bool[] visitedCities)
@@ -68,22 +66,21 @@ namespace TestAntSystem
 
     public class AntSystem
     {
-        private Random random; //69 123456789 123 1
-        private int maxNumberOfIterations = 1000;
-        private double pheromonePriority = 3; //alfa
-        private double heuristicPriority = 2; //beta
-        private double pheromoneDecreaseFactor = 0.1; //rho
-        private double pheromoneIncreaseFactor = 2.0; //Q
-        private double defaultPheromoneStartingValue = 1;
-        private double probabilityOfRoulette = 0.2;
+        private Random random;
+        private int maxNumberOfIterations;
+        private double pheromonePriority; //alfa
+        private double heuristicPriority; //beta
+        private double pheromoneDecreaseFactor; //rho
+        private double pheromoneIncreaseFactor; //Q
+        private readonly double defaultPheromoneStartingValue = 1;
+        private readonly double probabilityOfRoulette = 0.2;
         private int[] bestPath;
         private double bestSolution = double.MaxValue;
-        private int warehouse = 0;
+        private readonly int warehouse = 0;
         private Ant[] ants;
-        private int capacity = 35;
-        private int numberOfElitistAnts = 30;
-        private int numberOfRankAnts = 5;
-        private int numberOfTrucks = 5;
+        private int capacity;
+        private int numberOfElitistAnts;
+        private int numberOfRankAnts;
         private int numberOfAnts;
         private int seed;
 
@@ -114,21 +111,20 @@ namespace TestAntSystem
             }
             else
             {
-                int numberOfEdges = distances.GetLength(0);
-                this.pheromones = new double[numberOfEdges, numberOfEdges];
-                for (int i = 0; i < numberOfEdges; i++)
-                    for (int j = 0; j < numberOfEdges; j++)
-                        this.pheromones[i, j] = defaultPheromoneStartingValue;
+                SetStartingPheromones();
             }
 
             bestPath = Array.Empty<int>();
             ants = new Ant[numberOfAnts];
-            /*
-            Console.WriteLine("Dystanse międzi miastami: ");
-            for (int i = 0; i < distances.GetLength(0); i++)
-                for (int j = 0; j < distances.GetLength(1); j++)
-                    Console.WriteLine($"Dystans między {i}-{j}: {distances[i,j]}");
-            */
+        }
+
+        private void SetStartingPheromones()
+        {
+            int numberOfEdges = distances.GetLength(0);
+            this.pheromones = new double[numberOfEdges, numberOfEdges];
+            for (int i = 0; i < numberOfEdges; i++)
+                for (int j = 0; j < numberOfEdges; j++)
+                    this.pheromones[i, j] = defaultPheromoneStartingValue;
         }
 
         private double CalculateSumOfEdgeWeightsFromCity(int currentCity, Ant ant)
@@ -152,31 +148,19 @@ namespace TestAntSystem
             double[] roulettePercents = new double[demandsOfCities.Length+1];
             roulettePercents[warehouse] = 0;
             double sumOfEdgeWeightsFromCity = CalculateSumOfEdgeWeightsFromCity(ant.currentCity, ant);
-            //Console.WriteLine("Suma: "+sumOfEdgeWeightsFromCity);
+            
             for (int nextCity = 1; nextCity < demandsOfCities.Length; nextCity++)
             {
                 if (CanAntGoToTheCity(ant,nextCity))
                 {
-                    //Console.WriteLine("Miasto mrówki: " + ant.currentCity);
-                    //Console.WriteLine("Następne miasto: " + nextCity);
-                    //Console.WriteLine(ProbabilityOfMovingToTheCity(ant.currentCity, nextCity));
-                    //Console.WriteLine(sumOfEdgeWeightsFromCity);
                     roulettePercents[nextCity] = ProbabilityOfMovingToTheCity(ant.currentCity,nextCity) / sumOfEdgeWeightsFromCity;
-                    //Console.WriteLine("Procenty: "+roulettePercents[nextCity]);
                 }
                 else // Mamy 0% na wylosowanie miasta, w którym aktualnie znajduje się mrówka lub już w nim była lub nie może do niego pójść
                 {
                     roulettePercents[nextCity] = 0;
-                    //Console.WriteLine("Procenty "+roulettePercents[nextCity]);
                 }
             }
-            /*
-            if(roulettePercents.All(x => x == 0))
-            {
-                int randomCity = Array.IndexOf(ant.visitedCities, false);
-                roulettePercents[randomCity] = 0.1;
-            }
-            */
+            
             for (int index = 1; index < demandsOfCities.Length; index++)
                 roulettePercents[index] = roulettePercents[index] + roulettePercents[index - 1];
 
@@ -185,13 +169,11 @@ namespace TestAntSystem
         
         public int ChooseNextCityByRoulette(Ant ant)
         {
-            //Console.WriteLine();
             double[] roulette = MakeRouletteArray(ant);
             double makeDraw = random.NextDouble();
-            //Console.WriteLine("Draw: "+makeDraw);
+            
             for(int i = 0; i < roulette.Length; i++)
             {
-                //Console.WriteLine(roulette[i]);
                 if (ant.currentCity != i && roulette[i] > makeDraw)
                 {
                     return i;
@@ -209,19 +191,7 @@ namespace TestAntSystem
             }
             else
             {
-                int min = int.MaxValue;
-                
-                int index = -1;
-
-                for (int nextCity = 1; nextCity < demandsOfCities.Length; nextCity++)
-                {
-                    if (CanAntGoToTheCity(ant, nextCity) && min > distances[ant.currentCity,nextCity])
-                    {
-                        min = distances[ant.currentCity,nextCity];
-                        index = nextCity;
-                    }
-                }
-                return index;
+                return ChooseNearestCity(ant);
             }
         }
 
@@ -240,8 +210,6 @@ namespace TestAntSystem
             ants = new Ant[numberOfAnts];
             for( int i = 1; i < ants.Length; i++)
             {
-                //int city = i % demandsOfCities.Length;
-                
                 int city;
                 do
                 {
@@ -253,22 +221,18 @@ namespace TestAntSystem
                 ants[i].Path.Push(warehouse);
                 ants[i].Path.Push(city);
                 ants[i].pathLength += distances[warehouse, city];
-                //Console.WriteLine("Mrówka numer: "+i);
-                //Console.WriteLine("Ładowność: " + capacity);
-                //Console.WriteLine("Miasto startowe: " + (i+1));
-
             }
         }
 
-        private void FindSolution(Ant ant, int id, int iteration)
+        private void FindSolution(Ant ant, int id, int iteration,ref string text, TypeOfSolution type)
         {
             
             int startCapacity = capacity;
             
             while (!ant.visitedCities.All(x => x)) // dopóki mrówka nie odwiedziła wszystkich miast
             {
-                int nextCity = ChooseNextCityByPseudoRoulette(ant);
-                //Console.WriteLine("Następne miasto: "+nextCity);
+                int nextCity = type == TypeOfSolution.Greedy ? ChooseNearestCity(ant) : ChooseNextCityByPseudoRoulette(ant);
+                
                 if (nextCity != -1)
                 {
                     ant.pathLength += distances[ant.currentCity, nextCity];
@@ -283,37 +247,20 @@ namespace TestAntSystem
                     ant.currentCity = warehouse;
                     ant.Path.Push(warehouse);
                     ant.capacity = startCapacity;
-                    ant.usedTrucks++;
                 }
-                /*
-                for(int i=0;i<ant.visitedCities.Length;i++)
-                {
-                    if (!ant.visitedCities[i])
-                        Console.WriteLine("Mrówka nie odiwedziła jeszcze miasta: "+i);
-                }
-                Console.WriteLine();
-                */
             }
+
             // dodaj jeszcze połączenie do magazynu
             ant.pathLength += distances[ant.currentCity, warehouse];
             ant.Path.Push(warehouse);
-            //Console.WriteLine(ant.visitedCities.All(x => x));
-            //Console.WriteLine(solution);
+            
             if (ant.pathLength < bestSolution)
             {
-                //Stack<int> stack = new(ant.Path);
                 Console.WriteLine($"Mrówka {id} znalazła rozwiązanie: " + ant.pathLength + " w iteracji: "+iteration);
+                text += $"Mrówka {id} znalazła rozwiązanie: " + ant.pathLength + " w iteracji: " + iteration + '\n';
                 bestPath = ant.Path.ToArray();
-                /*
-                while (stack.Count > 0)
-                {
-                    Console.Write(stack.Pop()+"<-");
-                }
-                Console.WriteLine();
-                */
-           }
-            bestSolution = ant.pathLength < bestSolution ? ant.pathLength : bestSolution;
-            
+                bestSolution = ant.pathLength;
+            }   
         }
 
         private void EvaporatePheromone()
@@ -329,49 +276,34 @@ namespace TestAntSystem
             }
         }
 
-        private void UpdatePheromoneWithRank()
+        private void UpdatePheromone(TypeOfSolution type)
         {
-
-            Array.Sort(ants, new AntComparer());
-
-            for (int i = 1; i < numberOfRankAnts; i++)
+            int n = ants.Length;
+            if (type == TypeOfSolution.Rank)
             {
-                //Console.WriteLine("Rozwiązanie mrówki: " + i);
-                while (ants[i].Path.Count > 1)
-                {
-                    int secondCity = ants[i].Path.Pop();
-                    int firstCity = ants[i].Path.Peek();
-                    //Console.Write(secondCity + "<-" + firstCity+"<-");
-                    int length = ants[i].pathLength;
-                    
-                    double increase = (numberOfRankAnts-i-1)*pheromoneIncreaseFactor / length;
-
-                    pheromones[firstCity, secondCity] += increase;
-                    pheromones[secondCity, firstCity] += increase;
-                }
+                Array.Sort(ants, new AntComparer());
+                n = numberOfRankAnts;
             }
-        }
 
-        private void UpdatePheromone()
-        {
-            for (int i = 1; i < ants.Length; i++)
+            for (int i = 1; i < n; i++)
             {
-                //Console.WriteLine("Rozwiązanie mrówki: " + i);
                 while (ants[i].Path.Count > 1)
                 {
                     int secondCity = ants[i].Path.Pop();
                     int firstCity = ants[i].Path.Peek();
-                    //Console.Write(secondCity + "<-" + firstCity+"<-");
+                    
                     double length = ants[i].pathLength;
 
-                    double increase = pheromoneIncreaseFactor / length;
-
-                    //increase = ants[i].usedTrucks > 5 ? increase/100 : increase;
+                    int rank = type == TypeOfSolution.Rank ? n - i - 1 : 1;
+                    double increase = rank * pheromoneIncreaseFactor / length;
 
                     pheromones[firstCity, secondCity] += increase;
                     pheromones[secondCity, firstCity] += increase;
                 }
             }
+
+            if (type == TypeOfSolution.Elitist)
+                UpdatePheromoneOnTheBestSolution();
         }
 
         private void UpdatePheromoneOnTheBestSolution()
@@ -388,52 +320,80 @@ namespace TestAntSystem
             }
         }
 
-        private void PrintBestSolution()
+        private void PrintBestSolution(ref string text)
         {
             Console.WriteLine($"Rozwiązanie dla ziarna{seed}: " + bestSolution);
-            
+            text += $"Rozwiązanie dla ziarna {seed}: " + bestSolution + '\n';
+
             int routeNumber = 0;
             for (int i = 0; i < bestPath.Length; i++)
             {
                 if (bestPath[i] == 0 && i != bestPath.Length - 1)
                 {
                     Console.WriteLine();
+                    text += '\n';
                     Console.Write("Route #" + ++routeNumber);
+                    text += "Route #" + routeNumber;
                 }
                 else if (bestPath[i] != 0)
+                {
                     Console.Write(" " + bestPath[i]);
+                    text += " " + bestPath[i];
+                }
             }
             Console.WriteLine();
-            
+            text += '\n';
         }
 
-        public void AntSystemSoultion(TypeOfSolution type)
+        public string AntSystemSoultion(TypeOfSolution type)
         {
             ResetData();
-            for (int i = 0; i < maxNumberOfIterations; i++)
+            string text = "";
+            if (type != TypeOfSolution.Greedy)
             {
-                // stwórz mrówki
-                InitAnts();
-
-                // dla każdej mrówki
-                for (int j = 1; j < ants.Length; j++)
+                for (int i = 0; i < maxNumberOfIterations; i++)
                 {
-                    // znajdź rozwiązanie
-                    FindSolution(ants[j], j, i);
+                    // stwórz mrówki
+                    InitAnts();
+
+                    // dla każdej mrówki
+                    for (int j = 1; j < ants.Length; j++)
+                    {
+                        // znajdź rozwiązanie
+                        FindSolution(ants[j], j, i, ref text, type);
+                    }
+                    // wyparuj feromon
+                    EvaporatePheromone();
+
+                    // rozłóż feromon
+                    UpdatePheromone(type);
                 }
-                // wyparuj feromon
-                EvaporatePheromone();
-
-                // dla każdej mrówki rozłóż feromon
-                if (type == TypeOfSolution.Rank)
-                    UpdatePheromoneWithRank();
-                else
-                    UpdatePheromone();
-
-                if (type == TypeOfSolution.Elitist)
-                    UpdatePheromoneOnTheBestSolution();
             }
-            PrintBestSolution();
+            else
+            {
+                Ant ant = new(capacity, warehouse, demandsOfCities.Length);
+                FindSolution(ant, 0, 0, ref text, type);
+            }
+
+            PrintBestSolution(ref text);
+            return text;
+        }
+
+        private int ChooseNearestCity(Ant ant)
+        {
+            int min = int.MaxValue;
+
+            int index = -1;
+
+            for (int nextCity = 1; nextCity < demandsOfCities.Length; nextCity++)
+            {
+                if (CanAntGoToTheCity(ant, nextCity) && min > distances[ant.currentCity, nextCity])
+                {
+                    min = distances[ant.currentCity, nextCity];
+                    index = nextCity;
+                }
+            }
+            return index;
         }
 
         private void ResetData()
@@ -451,7 +411,6 @@ namespace TestAntSystem
         public void ChangeSeed(int newSeed)
         {
             seed = newSeed;
-            //random = new(seed);
         }
     }
 }
