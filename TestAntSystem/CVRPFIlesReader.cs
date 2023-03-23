@@ -21,7 +21,7 @@ namespace TestAntSystem
 		private int[,] distances;
 		private int[] citiesWithDemands;
 		private string name;
-		private double optimalValue;
+		private int optimalValue;
 		private int numberOfTrucks;
 		private int dimension;
 
@@ -31,7 +31,15 @@ namespace TestAntSystem
 
 			name = allText[0].Split(':')[1];
 			Console.WriteLine("Wczytano plik: "+name);
-			dimension = int.Parse(allText[3].Split(':')[1]);
+
+			string[] commentSection = allText[1].Split(":");
+
+            numberOfTrucks = int.Parse(commentSection[2].Split(',')[0]);
+			Console.WriteLine("Liczba ciężarówek: " + numberOfTrucks);
+			string optValSection = commentSection[3];
+            optimalValue = int.Parse(optValSection.Remove(optValSection.Length - 1));
+            Console.WriteLine("Optymalna wartość: " + optimalValue);
+            dimension = int.Parse(allText[3].Split(':')[1]);
             capacity = int.Parse(allText[5].Split(':')[1]);
 
 			distances = new int[dimension, dimension];
@@ -52,7 +60,6 @@ namespace TestAntSystem
 			while (i < pom)//allText[i] != "DEPOT_SECTION")
 			{
 				string[] demand = allText[i++].Split(" ");
-                //Console.WriteLine(demand[1]);
                 citiesWithDemands[int.Parse(demand[0]) - 1] = int.Parse(demand[1]);
             }
 
@@ -62,9 +69,6 @@ namespace TestAntSystem
                 for (int j = 0; j < dimension; j++)
                 {
 					Point pointB = points[j];
-					//Console.WriteLine("Miasta: " + i + " - " + j);
-					//Console.WriteLine("Double: "+Math.Sqrt(Math.Pow(pointA.x - pointB.x, 2) + Math.Pow(pointA.y - pointB.y, 2)));
-                    //Console.WriteLine("Int: " + (int)Math.Sqrt(Math.Pow(pointA.x - pointB.x, 2) + Math.Pow(pointA.y - pointB.y, 2)));
                     distances[i, j] = (int)Math.Round(Math.Sqrt(Math.Pow(pointA.x - pointB.x, 2) + Math.Pow(pointA.y - pointB.y, 2)));
                 }
             }
@@ -83,6 +87,21 @@ namespace TestAntSystem
 		public int[] GetDemands()
 		{
 			return citiesWithDemands;
+		}
+
+		public int GetOptimalValue()
+		{
+			return optimalValue;
+		}
+
+		public string GetName()
+		{ 
+			return name; 
+		}
+
+		public int GetNumberOfTrucks()
+		{ 
+			return numberOfTrucks; 
 		}
 	}
 }

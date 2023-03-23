@@ -1,0 +1,11 @@
+Liczba mrówek: 64
+Liczba ciężarówek: 4
+
+Greedy Ant: 
+Mrówka 0 znalazła rozwiązanie: 1010 w iteracji: 0  Wynik gorszy od optymalnego o 20,958%
+Rozwiązanie dla ziarna 11: 1010
+
+Route #1 22 18 26
+Route #2 21 20 23 24 16 29 31 30
+Route #3 19 28 27 25 17 15 14 1 13 4
+Route #4 10 9 8 5 7 6 32 11 12 2 3
