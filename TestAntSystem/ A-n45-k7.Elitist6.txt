@@ -1,0 +1,54 @@
+Liczba mrówek: 88
+Liczba ciężarówek: 7
+Liczba elitystycznych mrówek: 29
+Elitist Ant System: 
+Alfa: 0 Beta: 1
+Wartość średnia: 1467
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 0
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 0
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Elitist Ant System: 
+Alfa: 1 Beta: 0
+Wartość średnia: 1352,6
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 813,8
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 0
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Elitist Ant System: 
+Alfa: 1 Beta: 1
+Wartość średnia: 1247,5
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 34,5
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 575,3
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 97,5Elitist Ant System: 
+Alfa: 1 Beta: 3
+Wartość średnia: 1251,5
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 6,3
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 558,1
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Elitist Ant System: 
+Alfa: 3 Beta: 1
+Wartość średnia: 1200,2
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 14,8
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 72,3
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 297,5Elitist Ant System: 
+Alfa: 2 Beta: 2
+Wartość średnia: 1210,7
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 12,2
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 305
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 777,2Elitist Ant System: 
+Alfa: 2 Beta: 3
+Wartość średnia: 1193,3
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 5,9
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 63,8
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 799,5Elitist Ant System: 
+Alfa: 3 Beta: 3
+Wartość średnia: 1187,2
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 4,8
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 23,7
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 378Elitist Ant System: 
+Alfa: 3 Beta: 2
+Wartość średnia: 1187
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 9,4
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 41
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 580,1Elitist Ant System: 
+Alfa: 4 Beta: 4
+Wartość średnia: 1180,6
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 1,7
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 12,2
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 110,5

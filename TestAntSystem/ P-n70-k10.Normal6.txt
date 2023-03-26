@@ -1,0 +1,53 @@
+Liczba mrówek: 138
+Liczba ciężarówek: 10
+Ant System: 
+Alfa: 0 Beta: 1
+Wartość średnia: 1348,3
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 0
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 0
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Ant System: 
+Alfa: 1 Beta: 0
+Wartość średnia: 1181,4
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 0
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 0
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Ant System: 
+Alfa: 1 Beta: 1
+Wartość średnia: 968,3
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 863,8
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 0
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Ant System: 
+Alfa: 3 Beta: 1
+Wartość średnia: 906
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 17,7
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 514,9
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Ant System: 
+Alfa: 1 Beta: 3
+Wartość średnia: 908,9
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 23,5
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 736,9
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Ant System: 
+Alfa: 2 Beta: 3
+Wartość średnia: 899,2
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 15
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 317,4
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Ant System: 
+Alfa: 3 Beta: 2
+Wartość średnia: 914,6
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 13,8
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 289,7
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Ant System: 
+Alfa: 2 Beta: 2
+Wartość średnia: 896,2
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 16,9
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 417,2
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Ant System: 
+Alfa: 3 Beta: 3
+Wartość średnia: 914,7
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 9,7
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 354,6
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0Ant System: 
+Alfa: 4 Beta: 4
+Wartość średnia: 904,8
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 20%: 6,7
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 10%: 506,4
+Liczba iteracji dla której wynik jest gorszy o co najwyżej 5%: 0

@@ -1,0 +1,360 @@
+Liczba mrówek: 88
+Liczba ciężarówek: 7
+Liczba elitystycznych mrówek: 29
+Elitist Ant System: 
+Alfa: 0 Beta: 0
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 2495 w iteracji: 0  Wynik gorszy od optymalnego o 117,714%
+Mrówka 2 znalazła rozwiązanie: 2230 w iteracji: 0  Wynik gorszy od optymalnego o 94,59%
+Mrówka 3 znalazła rozwiązanie: 2064 w iteracji: 0  Wynik gorszy od optymalnego o 80,105%
+Mrówka 48 znalazła rozwiązanie: 2017 w iteracji: 0  Wynik gorszy od optymalnego o 76,003%
+Mrówka 32 znalazła rozwiązanie: 2009 w iteracji: 2  Wynik gorszy od optymalnego o 75,305%
+Mrówka 71 znalazła rozwiązanie: 1923 w iteracji: 2  Wynik gorszy od optymalnego o 67,801%
+Mrówka 17 znalazła rozwiązanie: 1802 w iteracji: 5  Wynik gorszy od optymalnego o 57,243%
+Mrówka 8 znalazła rozwiązanie: 1745 w iteracji: 217  Wynik gorszy od optymalnego o 52,269%
+Mrówka 10 znalazła rozwiązanie: 1731 w iteracji: 572  Wynik gorszy od optymalnego o 51,047%
+Mrówka 34 znalazła rozwiązanie: 1730 w iteracji: 1295  Wynik gorszy od optymalnego o 50,96%
+Mrówka 31 znalazła rozwiązanie: 1696 w iteracji: 1903  Wynik gorszy od optymalnego o 47,993%
+Rozwiązanie dla ziarna 1: 1696
+
+Route #1 37 1 10
+Route #2 20 24 27 36 12
+Route #3 21 6 29 31 33 13 18
+Route #4 39 34 40 26 44 4
+Route #5 9 14 5 30 19 41 43
+Route #6 17 42 23 25 15 35
+Route #7 2 7 38 8 16 28 3 11 22 32
+Elitist Ant System: 
+Alfa: 1 Beta: 0
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 2495 w iteracji: 0  Wynik gorszy od optymalnego o 117,714%
+Mrówka 2 znalazła rozwiązanie: 2230 w iteracji: 0  Wynik gorszy od optymalnego o 94,59%
+Mrówka 3 znalazła rozwiązanie: 2064 w iteracji: 0  Wynik gorszy od optymalnego o 80,105%
+Mrówka 48 znalazła rozwiązanie: 2017 w iteracji: 0  Wynik gorszy od optymalnego o 76,003%
+Mrówka 71 znalazła rozwiązanie: 1923 w iteracji: 2  Wynik gorszy od optymalnego o 67,801%
+Mrówka 5 znalazła rozwiązanie: 1817 w iteracji: 3  Wynik gorszy od optymalnego o 58,551%
+Mrówka 36 znalazła rozwiązanie: 1797 w iteracji: 16  Wynik gorszy od optymalnego o 56,806%
+Mrówka 20 znalazła rozwiązanie: 1761 w iteracji: 20  Wynik gorszy od optymalnego o 53,665%
+Mrówka 79 znalazła rozwiązanie: 1753 w iteracji: 20  Wynik gorszy od optymalnego o 52,967%
+Mrówka 69 znalazła rozwiązanie: 1722 w iteracji: 22  Wynik gorszy od optymalnego o 50,262%
+Mrówka 64 znalazła rozwiązanie: 1612 w iteracji: 24  Wynik gorszy od optymalnego o 40,663%
+Mrówka 74 znalazła rozwiązanie: 1595 w iteracji: 32  Wynik gorszy od optymalnego o 39,18%
+Mrówka 9 znalazła rozwiązanie: 1581 w iteracji: 34  Wynik gorszy od optymalnego o 37,958%
+Mrówka 27 znalazła rozwiązanie: 1578 w iteracji: 34  Wynik gorszy od optymalnego o 37,696%
+Mrówka 22 znalazła rozwiązanie: 1552 w iteracji: 39  Wynik gorszy od optymalnego o 35,428%
+Mrówka 87 znalazła rozwiązanie: 1549 w iteracji: 48  Wynik gorszy od optymalnego o 35,166%
+Mrówka 72 znalazła rozwiązanie: 1542 w iteracji: 51  Wynik gorszy od optymalnego o 34,555%
+Mrówka 12 znalazła rozwiązanie: 1517 w iteracji: 52  Wynik gorszy od optymalnego o 32,373%
+Mrówka 26 znalazła rozwiązanie: 1487 w iteracji: 61  Wynik gorszy od optymalnego o 29,756%
+Mrówka 18 znalazła rozwiązanie: 1486 w iteracji: 117  Wynik gorszy od optymalnego o 29,668%
+Mrówka 42 znalazła rozwiązanie: 1464 w iteracji: 133  Wynik gorszy od optymalnego o 27,749%
+Mrówka 47 znalazła rozwiązanie: 1461 w iteracji: 198  Wynik gorszy od optymalnego o 27,487%
+Mrówka 49 znalazła rozwiązanie: 1438 w iteracji: 220  Wynik gorszy od optymalnego o 25,48%
+Mrówka 66 znalazła rozwiązanie: 1384 w iteracji: 233  Wynik gorszy od optymalnego o 20,768%
+Mrówka 86 znalazła rozwiązanie: 1375 w iteracji: 1059  Wynik gorszy od optymalnego o 19,983%
+Rozwiązanie dla ziarna 1: 1375
+
+Route #1 34 26 12
+Route #2 28 19 36 30 10
+Route #3 40 20 16 18 32 35 39
+Route #4 3 27 29 41 43 11
+Route #5 8 7 13 31 22 5 14 37 1
+Route #6 2 21 9 17 23 25 15 42 38
+Route #7 6 4 24 44 33
+Elitist Ant System: 
+Alfa: 0 Beta: 1
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 2066 w iteracji: 0  Wynik gorszy od optymalnego o 80,279%
+Mrówka 3 znalazła rozwiązanie: 1893 w iteracji: 0  Wynik gorszy od optymalnego o 65,183%
+Mrówka 9 znalazła rozwiązanie: 1856 w iteracji: 0  Wynik gorszy od optymalnego o 61,955%
+Mrówka 11 znalazła rozwiązanie: 1825 w iteracji: 0  Wynik gorszy od optymalnego o 59,25%
+Mrówka 21 znalazła rozwiązanie: 1760 w iteracji: 0  Wynik gorszy od optymalnego o 53,578%
+Mrówka 30 znalazła rozwiązanie: 1716 w iteracji: 0  Wynik gorszy od optymalnego o 49,738%
+Mrówka 44 znalazła rozwiązanie: 1703 w iteracji: 2  Wynik gorszy od optymalnego o 48,604%
+Mrówka 30 znalazła rozwiązanie: 1676 w iteracji: 3  Wynik gorszy od optymalnego o 46,248%
+Mrówka 66 znalazła rozwiązanie: 1670 w iteracji: 4  Wynik gorszy od optymalnego o 45,724%
+Mrówka 55 znalazła rozwiązanie: 1585 w iteracji: 5  Wynik gorszy od optymalnego o 38,307%
+Mrówka 50 znalazła rozwiązanie: 1544 w iteracji: 19  Wynik gorszy od optymalnego o 34,729%
+Mrówka 82 znalazła rozwiązanie: 1540 w iteracji: 153  Wynik gorszy od optymalnego o 34,38%
+Mrówka 87 znalazła rozwiązanie: 1513 w iteracji: 267  Wynik gorszy od optymalnego o 32,024%
+Mrówka 28 znalazła rozwiązanie: 1502 w iteracji: 427  Wynik gorszy od optymalnego o 31,065%
+Mrówka 5 znalazła rozwiązanie: 1492 w iteracji: 694  Wynik gorszy od optymalnego o 30,192%
+Mrówka 43 znalazła rozwiązanie: 1469 w iteracji: 821  Wynik gorszy od optymalnego o 28,185%
+Rozwiązanie dla ziarna 1: 1469
+
+Route #1 3 28 12
+Route #2 41 29 10 17 18 13
+Route #3 23 42 25 37 1 16 20 40
+Route #4 9 11 43 27 14 24
+Route #5 32 5 36 19 31 30
+Route #6 7 21 6 4 26 34 39 35
+Route #7 2 8 38 15 22 44 33
+Elitist Ant System: 
+Alfa: 1 Beta: 1
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 2066 w iteracji: 0  Wynik gorszy od optymalnego o 80,279%
+Mrówka 3 znalazła rozwiązanie: 1893 w iteracji: 0  Wynik gorszy od optymalnego o 65,183%
+Mrówka 9 znalazła rozwiązanie: 1856 w iteracji: 0  Wynik gorszy od optymalnego o 61,955%
+Mrówka 11 znalazła rozwiązanie: 1825 w iteracji: 0  Wynik gorszy od optymalnego o 59,25%
+Mrówka 21 znalazła rozwiązanie: 1760 w iteracji: 0  Wynik gorszy od optymalnego o 53,578%
+Mrówka 30 znalazła rozwiązanie: 1716 w iteracji: 0  Wynik gorszy od optymalnego o 49,738%
+Mrówka 55 znalazła rozwiązanie: 1705 w iteracji: 1  Wynik gorszy od optymalnego o 48,778%
+Mrówka 44 znalazła rozwiązanie: 1614 w iteracji: 2  Wynik gorszy od optymalnego o 40,838%
+Mrówka 83 znalazła rozwiązanie: 1611 w iteracji: 2  Wynik gorszy od optymalnego o 40,576%
+Mrówka 36 znalazła rozwiązanie: 1606 w iteracji: 5  Wynik gorszy od optymalnego o 40,14%
+Mrówka 6 znalazła rozwiązanie: 1582 w iteracji: 7  Wynik gorszy od optymalnego o 38,045%
+Mrówka 59 znalazła rozwiązanie: 1576 w iteracji: 8  Wynik gorszy od optymalnego o 37,522%
+Mrówka 59 znalazła rozwiązanie: 1557 w iteracji: 12  Wynik gorszy od optymalnego o 35,864%
+Mrówka 63 znalazła rozwiązanie: 1550 w iteracji: 15  Wynik gorszy od optymalnego o 35,253%
+Mrówka 13 znalazła rozwiązanie: 1513 w iteracji: 16  Wynik gorszy od optymalnego o 32,024%
+Mrówka 5 znalazła rozwiązanie: 1479 w iteracji: 17  Wynik gorszy od optymalnego o 29,058%
+Mrówka 63 znalazła rozwiązanie: 1467 w iteracji: 20  Wynik gorszy od optymalnego o 28,01%
+Mrówka 83 znalazła rozwiązanie: 1406 w iteracji: 20  Wynik gorszy od optymalnego o 22,688%
+Mrówka 14 znalazła rozwiązanie: 1384 w iteracji: 26  Wynik gorszy od optymalnego o 20,768%
+Mrówka 67 znalazła rozwiązanie: 1380 w iteracji: 32  Wynik gorszy od optymalnego o 20,419%
+Mrówka 3 znalazła rozwiązanie: 1334 w iteracji: 38  Wynik gorszy od optymalnego o 16,405%
+Mrówka 81 znalazła rozwiązanie: 1328 w iteracji: 75  Wynik gorszy od optymalnego o 15,881%
+Mrówka 76 znalazła rozwiązanie: 1324 w iteracji: 79  Wynik gorszy od optymalnego o 15,532%
+Mrówka 73 znalazła rozwiązanie: 1315 w iteracji: 257  Wynik gorszy od optymalnego o 14,747%
+Mrówka 78 znalazła rozwiązanie: 1310 w iteracji: 305  Wynik gorszy od optymalnego o 14,311%
+Mrówka 46 znalazła rozwiązanie: 1304 w iteracji: 308  Wynik gorszy od optymalnego o 13,787%
+Mrówka 30 znalazła rozwiązanie: 1244 w iteracji: 444  Wynik gorszy od optymalnego o 8,551%
+Mrówka 70 znalazła rozwiązanie: 1189 w iteracji: 975  Wynik gorszy od optymalnego o 3,752%
+Rozwiązanie dla ziarna 1: 1189
+
+Route #1 34 26 12
+Route #2 4 6 44 24 9
+Route #3 35 32 13 18 20 16 7 40
+Route #4 2 33 36 19 31 29
+Route #5 39 8 10 15 23 25 17
+Route #6 38 42 1 37 30 22 5
+Route #7 21 14 27 41 43 11 3 28
+Elitist Ant System: 
+Alfa: 3 Beta: 1
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 2066 w iteracji: 0  Wynik gorszy od optymalnego o 80,279%
+Mrówka 3 znalazła rozwiązanie: 1893 w iteracji: 0  Wynik gorszy od optymalnego o 65,183%
+Mrówka 9 znalazła rozwiązanie: 1856 w iteracji: 0  Wynik gorszy od optymalnego o 61,955%
+Mrówka 11 znalazła rozwiązanie: 1825 w iteracji: 0  Wynik gorszy od optymalnego o 59,25%
+Mrówka 21 znalazła rozwiązanie: 1760 w iteracji: 0  Wynik gorszy od optymalnego o 53,578%
+Mrówka 30 znalazła rozwiązanie: 1716 w iteracji: 0  Wynik gorszy od optymalnego o 49,738%
+Mrówka 11 znalazła rozwiązanie: 1692 w iteracji: 1  Wynik gorszy od optymalnego o 47,644%
+Mrówka 84 znalazła rozwiązanie: 1676 w iteracji: 1  Wynik gorszy od optymalnego o 46,248%
+Mrówka 86 znalazła rozwiązanie: 1647 w iteracji: 2  Wynik gorszy od optymalnego o 43,717%
+Mrówka 50 znalazła rozwiązanie: 1594 w iteracji: 3  Wynik gorszy od optymalnego o 39,092%
+Mrówka 33 znalazła rozwiązanie: 1551 w iteracji: 4  Wynik gorszy od optymalnego o 35,34%
+Mrówka 9 znalazła rozwiązanie: 1501 w iteracji: 8  Wynik gorszy od optymalnego o 30,977%
+Mrówka 58 znalazła rozwiązanie: 1448 w iteracji: 10  Wynik gorszy od optymalnego o 26,353%
+Mrówka 44 znalazła rozwiązanie: 1414 w iteracji: 11  Wynik gorszy od optymalnego o 23,386%
+Mrówka 43 znalazła rozwiązanie: 1407 w iteracji: 13  Wynik gorszy od optymalnego o 22,775%
+Mrówka 31 znalazła rozwiązanie: 1399 w iteracji: 15  Wynik gorszy od optymalnego o 22,077%
+Mrówka 78 znalazła rozwiązanie: 1394 w iteracji: 15  Wynik gorszy od optymalnego o 21,64%
+Mrówka 21 znalazła rozwiązanie: 1383 w iteracji: 16  Wynik gorszy od optymalnego o 20,681%
+Mrówka 48 znalazła rozwiązanie: 1373 w iteracji: 16  Wynik gorszy od optymalnego o 19,808%
+Mrówka 52 znalazła rozwiązanie: 1370 w iteracji: 16  Wynik gorszy od optymalnego o 19,546%
+Mrówka 65 znalazła rozwiązanie: 1367 w iteracji: 19  Wynik gorszy od optymalnego o 19,284%
+Mrówka 73 znalazła rozwiązanie: 1364 w iteracji: 20  Wynik gorszy od optymalnego o 19,023%
+Mrówka 18 znalazła rozwiązanie: 1311 w iteracji: 21  Wynik gorszy od optymalnego o 14,398%
+Mrówka 63 znalazła rozwiązanie: 1286 w iteracji: 21  Wynik gorszy od optymalnego o 12,216%
+Mrówka 51 znalazła rozwiązanie: 1280 w iteracji: 24  Wynik gorszy od optymalnego o 11,693%
+Mrówka 42 znalazła rozwiązanie: 1252 w iteracji: 33  Wynik gorszy od optymalnego o 9,25%
+Mrówka 3 znalazła rozwiązanie: 1224 w iteracji: 42  Wynik gorszy od optymalnego o 6,806%
+Mrówka 55 znalazła rozwiązanie: 1222 w iteracji: 66  Wynik gorszy od optymalnego o 6,632%
+Mrówka 38 znalazła rozwiązanie: 1217 w iteracji: 80  Wynik gorszy od optymalnego o 6,195%
+Mrówka 68 znalazła rozwiązanie: 1213 w iteracji: 173  Wynik gorszy od optymalnego o 5,846%
+Mrówka 21 znalazła rozwiązanie: 1211 w iteracji: 629  Wynik gorszy od optymalnego o 5,672%
+Mrówka 5 znalazła rozwiązanie: 1208 w iteracji: 1572  Wynik gorszy od optymalnego o 5,41%
+Rozwiązanie dla ziarna 1: 1208
+
+Route #1 36 19 31 29 27
+Route #2 34 26 12
+Route #3 22 30 37 1 10
+Route #4 4 6 28 3 11 43 41 2
+Route #5 40 20 16 7 18 13 32 35
+Route #6 39 5 14 33 44 24
+Route #7 8 38 23 42 15 25 17 9 21
+Elitist Ant System: 
+Alfa: 1 Beta: 3
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 1491 w iteracji: 0  Wynik gorszy od optymalnego o 30,105%
+Mrówka 20 znalazła rozwiązanie: 1476 w iteracji: 0  Wynik gorszy od optymalnego o 28,796%
+Mrówka 24 znalazła rozwiązanie: 1455 w iteracji: 0  Wynik gorszy od optymalnego o 26,963%
+Mrówka 78 znalazła rozwiązanie: 1436 w iteracji: 1  Wynik gorszy od optymalnego o 25,305%
+Mrówka 81 znalazła rozwiązanie: 1409 w iteracji: 1  Wynik gorszy od optymalnego o 22,949%
+Mrówka 79 znalazła rozwiązanie: 1403 w iteracji: 4  Wynik gorszy od optymalnego o 22,426%
+Mrówka 71 znalazła rozwiązanie: 1394 w iteracji: 8  Wynik gorszy od optymalnego o 21,64%
+Mrówka 10 znalazła rozwiązanie: 1383 w iteracji: 10  Wynik gorszy od optymalnego o 20,681%
+Mrówka 53 znalazła rozwiązanie: 1307 w iteracji: 12  Wynik gorszy od optymalnego o 14,049%
+Mrówka 22 znalazła rozwiązanie: 1301 w iteracji: 104  Wynik gorszy od optymalnego o 13,525%
+Mrówka 36 znalazła rozwiązanie: 1293 w iteracji: 136  Wynik gorszy od optymalnego o 12,827%
+Mrówka 60 znalazła rozwiązanie: 1276 w iteracji: 137  Wynik gorszy od optymalnego o 11,344%
+Mrówka 80 znalazła rozwiązanie: 1272 w iteracji: 300  Wynik gorszy od optymalnego o 10,995%
+Mrówka 32 znalazła rozwiązanie: 1265 w iteracji: 558  Wynik gorszy od optymalnego o 10,384%
+Mrówka 68 znalazła rozwiązanie: 1253 w iteracji: 598  Wynik gorszy od optymalnego o 9,337%
+Mrówka 59 znalazła rozwiązanie: 1247 w iteracji: 2366  Wynik gorszy od optymalnego o 8,813%
+Rozwiązanie dla ziarna 1: 1247
+
+Route #1 5 22 30 37 1 42
+Route #2 18 16 20 21
+Route #3 43 11 3 28 6 4
+Route #4 13 32 35 39 34 26 12
+Route #5 2 41 27 29 19 36 31
+Route #6 40 17 23 25 15 10
+Route #7 7 38 8 9 14 33 44 24
+Elitist Ant System: 
+Alfa: 2 Beta: 2
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 1723 w iteracji: 0  Wynik gorszy od optymalnego o 50,349%
+Mrówka 2 znalazła rozwiązanie: 1667 w iteracji: 0  Wynik gorszy od optymalnego o 45,462%
+Mrówka 3 znalazła rozwiązanie: 1493 w iteracji: 0  Wynik gorszy od optymalnego o 30,279%
+Mrówka 18 znalazła rozwiązanie: 1476 w iteracji: 1  Wynik gorszy od optymalnego o 28,796%
+Mrówka 14 znalazła rozwiązanie: 1406 w iteracji: 4  Wynik gorszy od optymalnego o 22,688%
+Mrówka 10 znalazła rozwiązanie: 1402 w iteracji: 6  Wynik gorszy od optymalnego o 22,339%
+Mrówka 73 znalazła rozwiązanie: 1400 w iteracji: 12  Wynik gorszy od optymalnego o 22,164%
+Mrówka 18 znalazła rozwiązanie: 1382 w iteracji: 15  Wynik gorszy od optymalnego o 20,593%
+Mrówka 55 znalazła rozwiązanie: 1371 w iteracji: 15  Wynik gorszy od optymalnego o 19,634%
+Mrówka 3 znalazła rozwiązanie: 1368 w iteracji: 19  Wynik gorszy od optymalnego o 19,372%
+Mrówka 23 znalazła rozwiązanie: 1364 w iteracji: 19  Wynik gorszy od optymalnego o 19,023%
+Mrówka 63 znalazła rozwiązanie: 1347 w iteracji: 19  Wynik gorszy od optymalnego o 17,539%
+Mrówka 7 znalazła rozwiązanie: 1334 w iteracji: 28  Wynik gorszy od optymalnego o 16,405%
+Mrówka 73 znalazła rozwiązanie: 1326 w iteracji: 36  Wynik gorszy od optymalnego o 15,707%
+Mrówka 10 znalazła rozwiązanie: 1320 w iteracji: 43  Wynik gorszy od optymalnego o 15,183%
+Mrówka 36 znalazła rozwiązanie: 1313 w iteracji: 44  Wynik gorszy od optymalnego o 14,572%
+Mrówka 42 znalazła rozwiązanie: 1287 w iteracji: 45  Wynik gorszy od optymalnego o 12,304%
+Mrówka 10 znalazła rozwiązanie: 1286 w iteracji: 115  Wynik gorszy od optymalnego o 12,216%
+Mrówka 44 znalazła rozwiązanie: 1285 w iteracji: 315  Wynik gorszy od optymalnego o 12,129%
+Mrówka 85 znalazła rozwiązanie: 1229 w iteracji: 347  Wynik gorszy od optymalnego o 7,243%
+Mrówka 5 znalazła rozwiązanie: 1226 w iteracji: 996  Wynik gorszy od optymalnego o 6,981%
+Mrówka 87 znalazła rozwiązanie: 1224 w iteracji: 2392  Wynik gorszy od optymalnego o 6,806%
+Rozwiązanie dla ziarna 1: 1224
+
+Route #1 44 33 29 27
+Route #2 31 36 19 30 37 1
+Route #3 34 26 12
+Route #4 24 14 5 22 10 40
+Route #5 20 16 7 18 13 32 35 39
+Route #6 41 43 11 3 28 6 4 2
+Route #7 21 15 42 23 25 17 38 8 9
+Elitist Ant System: 
+Alfa: 2 Beta: 3
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 1491 w iteracji: 0  Wynik gorszy od optymalnego o 30,105%
+Mrówka 20 znalazła rozwiązanie: 1476 w iteracji: 0  Wynik gorszy od optymalnego o 28,796%
+Mrówka 24 znalazła rozwiązanie: 1455 w iteracji: 0  Wynik gorszy od optymalnego o 26,963%
+Mrówka 78 znalazła rozwiązanie: 1436 w iteracji: 1  Wynik gorszy od optymalnego o 25,305%
+Mrówka 81 znalazła rozwiązanie: 1409 w iteracji: 1  Wynik gorszy od optymalnego o 22,949%
+Mrówka 16 znalazła rozwiązanie: 1392 w iteracji: 3  Wynik gorszy od optymalnego o 21,466%
+Mrówka 79 znalazła rozwiązanie: 1379 w iteracji: 4  Wynik gorszy od optymalnego o 20,332%
+Mrówka 53 znalazła rozwiązanie: 1345 w iteracji: 7  Wynik gorszy od optymalnego o 17,365%
+Mrówka 22 znalazła rozwiązanie: 1309 w iteracji: 16  Wynik gorszy od optymalnego o 14,223%
+Mrówka 4 znalazła rozwiązanie: 1291 w iteracji: 19  Wynik gorszy od optymalnego o 12,653%
+Mrówka 54 znalazła rozwiązanie: 1282 w iteracji: 36  Wynik gorszy od optymalnego o 11,867%
+Mrówka 12 znalazła rozwiązanie: 1236 w iteracji: 48  Wynik gorszy od optymalnego o 7,853%
+Mrówka 25 znalazła rozwiązanie: 1225 w iteracji: 518  Wynik gorszy od optymalnego o 6,894%
+Mrówka 42 znalazła rozwiązanie: 1224 w iteracji: 1431  Wynik gorszy od optymalnego o 6,806%
+Mrówka 77 znalazła rozwiązanie: 1222 w iteracji: 1655  Wynik gorszy od optymalnego o 6,632%
+Mrówka 33 znalazła rozwiązanie: 1205 w iteracji: 1730  Wynik gorszy od optymalnego o 5,148%
+Mrówka 65 znalazła rozwiązanie: 1203 w iteracji: 1843  Wynik gorszy od optymalnego o 4,974%
+Mrówka 60 znalazła rozwiązanie: 1200 w iteracji: 1920  Wynik gorszy od optymalnego o 4,712%
+Mrówka 23 znalazła rozwiązanie: 1192 w iteracji: 2023  Wynik gorszy od optymalnego o 4,014%
+Mrówka 28 znalazła rozwiązanie: 1190 w iteracji: 2032  Wynik gorszy od optymalnego o 3,839%
+Mrówka 47 znalazła rozwiązanie: 1187 w iteracji: 2376  Wynik gorszy od optymalnego o 3,578%
+Rozwiązanie dla ziarna 1: 1187
+
+Route #1 27 29 36 19 31
+Route #2 42 1 37 30 5 22
+Route #3 17 23 25 15 10
+Route #4 2 26 34 39 35
+Route #5 41 43 11 3 28 6 4
+Route #6 21 14 33 44 24 12
+Route #7 18 13 32 9 8 38 20 16 7 40
+Elitist Ant System: 
+Alfa: 3 Beta: 2
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 1723 w iteracji: 0  Wynik gorszy od optymalnego o 50,349%
+Mrówka 2 znalazła rozwiązanie: 1667 w iteracji: 0  Wynik gorszy od optymalnego o 45,462%
+Mrówka 3 znalazła rozwiązanie: 1493 w iteracji: 0  Wynik gorszy od optymalnego o 30,279%
+Mrówka 18 znalazła rozwiązanie: 1476 w iteracji: 1  Wynik gorszy od optymalnego o 28,796%
+Mrówka 14 znalazła rozwiązanie: 1474 w iteracji: 4  Wynik gorszy od optymalnego o 28,621%
+Mrówka 10 znalazła rozwiązanie: 1472 w iteracji: 5  Wynik gorszy od optymalnego o 28,447%
+Mrówka 43 znalazła rozwiązanie: 1460 w iteracji: 6  Wynik gorszy od optymalnego o 27,4%
+Mrówka 16 znalazła rozwiązanie: 1399 w iteracji: 7  Wynik gorszy od optymalnego o 22,077%
+Mrówka 6 znalazła rozwiązanie: 1375 w iteracji: 9  Wynik gorszy od optymalnego o 19,983%
+Mrówka 32 znalazła rozwiązanie: 1330 w iteracji: 11  Wynik gorszy od optymalnego o 16,056%
+Mrówka 76 znalazła rozwiązanie: 1329 w iteracji: 12  Wynik gorszy od optymalnego o 15,969%
+Mrówka 84 znalazła rozwiązanie: 1318 w iteracji: 26  Wynik gorszy od optymalnego o 15,009%
+Mrówka 63 znalazła rozwiązanie: 1289 w iteracji: 27  Wynik gorszy od optymalnego o 12,478%
+Mrówka 74 znalazła rozwiązanie: 1274 w iteracji: 51  Wynik gorszy od optymalnego o 11,169%
+Mrówka 63 znalazła rozwiązanie: 1269 w iteracji: 60  Wynik gorszy od optymalnego o 10,733%
+Mrówka 44 znalazła rozwiązanie: 1267 w iteracji: 69  Wynik gorszy od optymalnego o 10,558%
+Mrówka 29 znalazła rozwiązanie: 1244 w iteracji: 75  Wynik gorszy od optymalnego o 8,551%
+Mrówka 6 znalazła rozwiązanie: 1231 w iteracji: 77  Wynik gorszy od optymalnego o 7,417%
+Mrówka 38 znalazła rozwiązanie: 1228 w iteracji: 96  Wynik gorszy od optymalnego o 7,155%
+Mrówka 84 znalazła rozwiązanie: 1227 w iteracji: 154  Wynik gorszy od optymalnego o 7,068%
+Mrówka 14 znalazła rozwiązanie: 1217 w iteracji: 169  Wynik gorszy od optymalnego o 6,195%
+Mrówka 34 znalazła rozwiązanie: 1216 w iteracji: 171  Wynik gorszy od optymalnego o 6,108%
+Mrówka 3 znalazła rozwiązanie: 1204 w iteracji: 201  Wynik gorszy od optymalnego o 5,061%
+Mrówka 28 znalazła rozwiązanie: 1201 w iteracji: 237  Wynik gorszy od optymalnego o 4,799%
+Mrówka 48 znalazła rozwiązanie: 1195 w iteracji: 475  Wynik gorszy od optymalnego o 4,276%
+Mrówka 69 znalazła rozwiązanie: 1189 w iteracji: 1368  Wynik gorszy od optymalnego o 3,752%
+Mrówka 28 znalazła rozwiązanie: 1187 w iteracji: 1486  Wynik gorszy od optymalnego o 3,578%
+Rozwiązanie dla ziarna 1: 1187
+
+Route #1 42 1 37 30 5 22
+Route #2 13 18 7 16 20 40
+Route #3 29 36 19 31 10
+Route #4 4 26 34 39 35
+Route #5 6 28 3 11 43 41 27 2
+Route #6 15 25 23 17 38 8 9 32
+Route #7 21 14 33 44 24 12
+Elitist Ant System: 
+Alfa: 3 Beta: 3
+Optymalne rozwiązanie: 1146
+Liczba elitarnych mrówek: 29
+Mrówka 1 znalazła rozwiązanie: 1491 w iteracji: 0  Wynik gorszy od optymalnego o 30,105%
+Mrówka 20 znalazła rozwiązanie: 1476 w iteracji: 0  Wynik gorszy od optymalnego o 28,796%
+Mrówka 24 znalazła rozwiązanie: 1455 w iteracji: 0  Wynik gorszy od optymalnego o 26,963%
+Mrówka 11 znalazła rozwiązanie: 1420 w iteracji: 1  Wynik gorszy od optymalnego o 23,909%
+Mrówka 81 znalazła rozwiązanie: 1409 w iteracji: 1  Wynik gorszy od optymalnego o 22,949%
+Mrówka 51 znalazła rozwiązanie: 1376 w iteracji: 3  Wynik gorszy od optymalnego o 20,07%
+Mrówka 28 znalazła rozwiązanie: 1352 w iteracji: 6  Wynik gorszy od optymalnego o 17,976%
+Mrówka 76 znalazła rozwiązanie: 1341 w iteracji: 12  Wynik gorszy od optymalnego o 17,016%
+Mrówka 46 znalazła rozwiązanie: 1318 w iteracji: 14  Wynik gorszy od optymalnego o 15,009%
+Mrówka 44 znalazła rozwiązanie: 1314 w iteracji: 18  Wynik gorszy od optymalnego o 14,66%
+Mrówka 45 znalazła rozwiązanie: 1312 w iteracji: 19  Wynik gorszy od optymalnego o 14,485%
+Mrówka 85 znalazła rozwiązanie: 1305 w iteracji: 21  Wynik gorszy od optymalnego o 13,874%
+Mrówka 75 znalazła rozwiązanie: 1291 w iteracji: 24  Wynik gorszy od optymalnego o 12,653%
+Mrówka 14 znalazła rozwiązanie: 1287 w iteracji: 25  Wynik gorszy od optymalnego o 12,304%
+Mrówka 13 znalazła rozwiązanie: 1277 w iteracji: 27  Wynik gorszy od optymalnego o 11,431%
+Mrówka 34 znalazła rozwiązanie: 1253 w iteracji: 28  Wynik gorszy od optymalnego o 9,337%
+Mrówka 44 znalazła rozwiązanie: 1246 w iteracji: 32  Wynik gorszy od optymalnego o 8,726%
+Mrówka 41 znalazła rozwiązanie: 1220 w iteracji: 38  Wynik gorszy od optymalnego o 6,457%
+Mrówka 16 znalazła rozwiązanie: 1212 w iteracji: 48  Wynik gorszy od optymalnego o 5,759%
+Mrówka 9 znalazła rozwiązanie: 1211 w iteracji: 52  Wynik gorszy od optymalnego o 5,672%
+Mrówka 43 znalazła rozwiązanie: 1210 w iteracji: 54  Wynik gorszy od optymalnego o 5,585%
+Mrówka 44 znalazła rozwiązanie: 1198 w iteracji: 59  Wynik gorszy od optymalnego o 4,538%
+Mrówka 78 znalazła rozwiązanie: 1197 w iteracji: 870  Wynik gorszy od optymalnego o 4,45%
+Mrówka 8 znalazła rozwiązanie: 1195 w iteracji: 1849  Wynik gorszy od optymalnego o 4,276%
+Mrówka 40 znalazła rozwiązanie: 1193 w iteracji: 1858  Wynik gorszy od optymalnego o 4,101%
+Mrówka 10 znalazła rozwiązanie: 1189 w iteracji: 2014  Wynik gorszy od optymalnego o 3,752%
+Mrówka 47 znalazła rozwiązanie: 1181 w iteracji: 2099  Wynik gorszy od optymalnego o 3,054%
+Mrówka 21 znalazła rozwiązanie: 1177 w iteracji: 2126  Wynik gorszy od optymalnego o 2,705%
+Mrówka 13 znalazła rozwiązanie: 1175 w iteracji: 2128  Wynik gorszy od optymalnego o 2,531%
+Rozwiązanie dla ziarna 1: 1175
+
+Route #1 21 24 44 33 5 14
+Route #2 36 19 31 29 27
+Route #3 40 20 16 7 18
+Route #4 9 22 30 37 1 42
+Route #5 41 43 11 3 28 6 4 2
+Route #6 32 35 39 34 26 12
+Route #7 13 8 38 17 23 25 15 10
